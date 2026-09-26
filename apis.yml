@@ -1,23 +1,52 @@
 aid: athena-club
+
 name: Athena Club
-description: 'Athena Club is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Athena Club is a private-company investment opportunity listed on the Forge Global marketplace. It represents a share class of a privately held entity, offering accredited investors a way to buy and sell equity in a secondary market. The company appears in Forge’s catalog of pre‑IPO firms, with valuation data and trading activity visible to platform users. This profile expands the stub with detailed context about its market presence and investor relevance.'
+
 url: https://raw.githubusercontent.com/api-evangelist/athena-club/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Private-Market
+- Investment
+- Secondary-Market
+- Equity
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://forgeglobal.com/athena-club_stock/
+
+  - type: Hosts
+    url: hosts/athena-club-hosts.yml
+  - type: Vendors
+    url: vendors/athena-club-vendors.yml
+  - type: DomainSecurity
+    url: security/athena-club-domain-security.yml
+  - type: Website
+    url: https://forgeglobal.com/athena-club_stock/
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
